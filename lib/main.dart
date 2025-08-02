@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'common/locale/l10n/app_localizations.dart';
+import 'common/l10n/app_localizations.dart';
 
 void main() {
   runApp(const MainApp());
