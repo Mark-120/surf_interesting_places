@@ -24,3 +24,5 @@ flutter:
   generate: true
   assets:
     - assets/icons/tutorial_1.svg
+    - assets/icons/tutorial_2.svg
+    - assets/icons/tutorial_3.svg
