@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:surf_interesting_places/features/tutorial/presentation/tutorial_screen.dart';
 import 'common/l10n/app_localizations.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: HomeScreen(),
+      home: TutorialScreen(),
     );
   }
 }
