@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:surf_interesting_places/common/uikit/themes/app_themes.dart';
 import 'package:surf_interesting_places/features/tutorial/presentation/tutorial_screen.dart';
 import 'common/l10n/app_localizations.dart';
 
@@ -12,6 +13,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: AppThemes.lightTheme,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       home: TutorialScreen(),

@@ -99,6 +99,54 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Привет, мир!'**
   String get helloWorld;
+
+  /// No description provided for @tutorialTitle1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добро пожаловать в Путеводитель'**
+  String get tutorialTitle1;
+
+  /// No description provided for @tutorialSubtitle1.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ищи новые локации и сохраняй самые любимые.'**
+  String get tutorialSubtitle1;
+
+  /// No description provided for @tutorialTitle2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Построй маршрут и отправляйся в путь'**
+  String get tutorialTitle2;
+
+  /// No description provided for @tutorialSubtitle2.
+  ///
+  /// In ru, this message translates to:
+  /// **'Достигай цели максимально быстро и комфортно.'**
+  String get tutorialSubtitle2;
+
+  /// No description provided for @tutorialTitle3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавляй места, которые нашёл сам'**
+  String get tutorialTitle3;
+
+  /// No description provided for @tutorialSubtitle3.
+  ///
+  /// In ru, this message translates to:
+  /// **'Делись самыми интересными и помоги нам стать лучше!'**
+  String get tutorialSubtitle3;
+
+  /// No description provided for @tutorialSkipButton.
+  ///
+  /// In ru, this message translates to:
+  /// **'Пропустить'**
+  String get tutorialSkipButton;
+
+  /// No description provided for @tutorialContinueButton.
+  ///
+  /// In ru, this message translates to:
+  /// **'ПРОДОЛЖИТЬ'**
+  String get tutorialContinueButton;
 }
 
 class _AppLocalizationsDelegate

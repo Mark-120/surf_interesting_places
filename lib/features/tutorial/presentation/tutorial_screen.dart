@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:surf_interesting_places/common/asset_paths.dart';
+import 'package:surf_interesting_places/common/l10n/app_localizations.dart';
+import 'package:surf_interesting_places/common/uikit/themes/app_text_styles.dart';
+
+import '../../../common/uikit/themes/app_colors.dart';
 
 class TutorialScreen extends StatefulWidget {
   const TutorialScreen({super.key});
@@ -22,12 +27,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
                   TextButton(
                     onPressed: () {},
                     child: Text(
-                      'Пропустить',
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        fontSize: 16,
-                        color: Color(0xFF4CAF50),
-                      ),
+                      AppLocalizations.of(context)!.tutorialSkipButton,
                     ),
                   ),
                 ]
@@ -100,7 +100,7 @@ class EmptyPageIndicator extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: Colors.grey,
+          color: AppColors.inactiveText,
         ),
       ),
     );
@@ -118,7 +118,7 @@ class FullPageIndicator extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: Color(0xFF4CAF50),
+          color: Theme.of(context).primaryColor,
         ),
       ),
     );
@@ -132,9 +132,9 @@ class WelcomeSubpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: _SubpageContent(
-        svgPath: 'assets/icons/tutorial_1.svg',
-        title: 'Добро пожаловать в Путеводитель',
-        subtitle: 'Ищи новые локации и сохраняй самые любимые.',
+        svgPath: AssetPaths.tutorial1,
+        title: AppLocalizations.of(context)!.tutorialTitle1,
+        subtitle: AppLocalizations.of(context)!.tutorialSubtitle1,
       ),
     );
   }
@@ -147,9 +147,9 @@ class RouteSubpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: _SubpageContent(
-        svgPath: 'assets/icons/tutorial_2.svg',
-        title: 'Построй маршрут и отправляйся в путь',
-        subtitle: 'Достигай цели максимально быстро и комфортно.',
+        svgPath: AssetPaths.tutorial2,
+        title: AppLocalizations.of(context)!.tutorialTitle2,
+        subtitle: AppLocalizations.of(context)!.tutorialSubtitle2,
       ),
     );
   }
@@ -164,9 +164,9 @@ class FavouriteSubpage extends StatelessWidget {
       children: [
         Center(
           child: _SubpageContent(
-            svgPath: 'assets/icons/tutorial_3.svg',
-            title: 'Добавляй места, которые нашёл сам',
-            subtitle: 'Делись самыми интересными и помоги нам стать лучше!',
+            svgPath: AssetPaths.tutorial3,
+            title: AppLocalizations.of(context)!.tutorialTitle3,
+            subtitle: AppLocalizations.of(context)!.tutorialSubtitle3,
           ),
         ),
         Positioned.fill(
@@ -183,12 +183,9 @@ class FavouriteSubpage extends StatelessWidget {
                     height: 48,
                     child: Center(
                       child: Text(
-                        'ПРОДОЛЖИТЬ',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                          fontFamily: 'Roboto',
+                        AppLocalizations.of(context)!.tutorialContinueButton,
+                        style: AppTextStyles.buttonText.copyWith(
+                          color: AppColors.white,
                         ),
                       ),
                     ),
@@ -233,13 +230,7 @@ class _SubpageContent extends StatelessWidget {
           Text(
             title,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontFamily: 'Roboto',
-              fontWeight: FontWeight.bold,
-              fontSize: 24,
-              color: Color(0xFF3B3E5B),
-              height: 1.2,
-            ),
+            style: Theme.of(context).textTheme.headlineMedium,
             overflow: TextOverflow.clip,
           ),
           SizedBox(
@@ -248,10 +239,8 @@ class _SubpageContent extends StatelessWidget {
           Text(
             subtitle,
             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontFamily: 'Roboto',
-              fontSize: 14,
-              color: Color(0xFF7C7E92),
+            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+              color: AppColors.lightTertiaryText,
             ),
           ),
         ],
