@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:surf_interesting_places/common/asset_paths.dart';
 import 'package:surf_interesting_places/common/l10n/app_localizations.dart';
 import 'package:surf_interesting_places/common/uikit/themes/app_text_styles.dart';
@@ -25,7 +26,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
             currentPage != 2
                 ? [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () => context.goNamed('main_page'),
                     child: Text(
                       AppLocalizations.of(context)!.tutorialSkipButton,
                     ),
@@ -177,7 +178,7 @@ class FavouriteSubpage extends StatelessWidget {
               child: Card(
                 color: Color(0xFF4CAF50),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () => context.goNamed('main_page'),
                   child: SizedBox(
                     width: double.infinity,
                     height: 48,
